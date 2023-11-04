@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsohwth18nrxe"]
+
+[ext_resource type="Script" path="res://level_1.gd" id="1_itu31"]
+[ext_resource type="Shader" path="res://level_1.gdshader" id="2_xowle"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p24qw"]
+shader = ExtResource("2_xowle")
+
+[node name="Level1" type="StaticBody2D"]
+script = ExtResource("1_itu31")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(119, -1, 62, 456, 164, 456, 161, 545, 267, 545, 265, 458, 343, 456, 450, 498, 447, 370, 547, 371, 545, 498, 627, 498, 618, 271, 720, 268, 729, 489, 833, 490, 832, 380, 930, 380, 993, 460, 1075, 460, 1079, 0, 1151, 0, 1151, 647, 1, 647, 1, -1)
+
+[node name="Polygon2D" type="Polygon2D" parent="CollisionPolygon2D"]
+material = SubResource("ShaderMaterial_p24qw")
